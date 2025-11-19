@@ -1,7 +1,9 @@
 "use client";
-import React from "react";
+import React, { useState } from "react";
 import { Box } from "@mui/system";
+
 export default function TaskPlanner() {
+     const [activeSection, setActiveSection] = useState("section1");
   return (
     <Box>
       <Box
@@ -24,7 +26,10 @@ export default function TaskPlanner() {
               cursor: "pointer",
               "&:hover": { backgroundColor: "#e0e0e0" },
             }}
+            
+            onClick={() => setActiveSection("section1")}
           >
+            
             {/* Sección 1 */}
             Today
           </Box>
@@ -38,6 +43,7 @@ export default function TaskPlanner() {
               cursor: "pointer",
               "&:hover": { backgroundColor: "#e0e0e0" },
             }}
+            onClick={() => setActiveSection("section2")}
           >
             {/* Sección 2 */}
             This week
@@ -52,6 +58,7 @@ export default function TaskPlanner() {
               cursor: "pointer",
               "&:hover": { backgroundColor: "#e0e0e0" },
             }}
+            onClick={() => setActiveSection("section3")}
           >
             {/* Sección 3 */}
             This month
@@ -66,6 +73,7 @@ export default function TaskPlanner() {
               cursor: "pointer",
               "&:hover": { backgroundColor: "#e0e0e0" },
             }}
+            onClick={() => setActiveSection("section4")}
           >
             {/* Sección 4 */}
             Insights
@@ -79,7 +87,8 @@ export default function TaskPlanner() {
             backgroundColor: "#e0e0e0",
             padding: 2,
           }}
-        ></Box>
+          
+        ><p>Sección activa: {activeSection}</p></Box>
       </Box>
     </Box>
   );
