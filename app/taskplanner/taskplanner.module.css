@@ -1,0 +1,18 @@
+/* Estilos para la página TaskPlanner */
+
+.container {
+  display: flex;
+  height: 100vh;
+}
+
+.leftContainer {
+  flex: 1;
+  background-color: #f0f0f0;
+  padding: 20px;
+}
+
+.rightContainer {
+  flex: 1;
+  background-color: #e0e0e0;
+  padding: 20px;
+}
